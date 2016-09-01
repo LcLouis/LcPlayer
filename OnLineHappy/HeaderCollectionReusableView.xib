@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="HeaderCollectionReusableView" reuseIdentifier="HeaderCollectionReusableView" id="U6b-Vx-4bR" customClass="HeaderCollectionReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qd-0S-htV">
+                    <rect key="frame" x="20" y="10" width="100" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="G04-Fi-xaj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="606-O7-N7P">
+                    <rect key="frame" x="8" y="13" width="4" height="19"/>
+                    <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiG-u4-6b1">
+                    <rect key="frame" x="250" y="10" width="63" height="26"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="imageEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" image="more.png">
+                        <color key="titleColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="BiG-u4-6b1" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="10" id="16K-6k-aZK"/>
+                <constraint firstItem="606-O7-N7P" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="8" id="7zA-E5-g1z"/>
+                <constraint firstItem="4qd-0S-htV" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="20" id="AAo-bj-1kV"/>
+                <constraint firstAttribute="bottom" secondItem="4qd-0S-htV" secondAttribute="bottom" constant="5" id="LXH-M3-v94"/>
+                <constraint firstAttribute="trailing" secondItem="BiG-u4-6b1" secondAttribute="trailing" constant="7" id="NBa-yd-vXm"/>
+                <constraint firstAttribute="bottom" secondItem="606-O7-N7P" secondAttribute="bottom" constant="9" id="NBd-1V-kbN"/>
+                <constraint firstItem="606-O7-N7P" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="13" id="YLZ-bI-gPr"/>
+                <constraint firstItem="4qd-0S-htV" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="10" id="Yjn-ck-i0p"/>
+                <constraint firstItem="BiG-u4-6b1" firstAttribute="leading" secondItem="4qd-0S-htV" secondAttribute="trailing" constant="130" id="dxS-wq-fJg"/>
+                <constraint firstItem="4qd-0S-htV" firstAttribute="leading" secondItem="606-O7-N7P" secondAttribute="trailing" constant="8" id="lDF-Ke-Bg8"/>
+                <constraint firstAttribute="bottom" secondItem="BiG-u4-6b1" secondAttribute="bottom" constant="5" id="wKT-OC-et9"/>
+            </constraints>
+            <connections>
+                <outlet property="moreBtn" destination="BiG-u4-6b1" id="Dql-7v-WfG"/>
+                <outlet property="titleLab" destination="4qd-0S-htV" id="5go-wj-Anm"/>
+            </connections>
+            <point key="canvasLocation" x="440" y="103.5"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="more.png" width="57" height="30"/>
+    </resources>
+</document>

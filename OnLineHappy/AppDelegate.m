@@ -7,16 +7,33 @@
 //
 
 #import "AppDelegate.h"
+#import "YRSideViewController.h"
+#import "LeftViewController.h"
 
 @interface AppDelegate ()
-
+@property (strong,nonatomic) YRSideViewController * yrSliderVC;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    
+    
+    LeftViewController * leftVC = [[LeftViewController alloc]init];
+    UIStoryboard * story = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UITabBarController * tabC = [story instantiateViewControllerWithIdentifier:@"MainTBC"];
+    tabC.tabBar.hidden = YES; 
+    self.yrSliderVC = [[YRSideViewController alloc]init];
+    self.yrSliderVC.leftViewController = leftVC;
+    self.yrSliderVC.rootViewController = tabC;
+    self.yrSliderVC.leftViewShowWidth = 210;
+    self.yrSliderVC.needSwipeShowMenu = true;//默认开启滑动手势
+    self.yrSliderVC.showBoundsShadow = NO;//阴影
+    self.window.rootViewController = self.yrSliderVC;
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
     return YES;
 }
 

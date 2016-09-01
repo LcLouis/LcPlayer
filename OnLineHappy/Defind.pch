@@ -1,0 +1,40 @@
+//
+//  Defind.pch
+//  OnLineHappy
+//
+//  Created by Lc、 on 15/10/20.
+//  Copyright © 2015年 Lc、. All rights reserved.
+//
+
+#ifndef Defind_pch
+#define Defind_pch
+
+#import "AFNetworking.h"
+
+#define M_RECT(x,y,w,h) CGRectMake(x, y, w, h)
+#define kScreenSize [UIScreen mainScreen].bounds.size
+#define oneColor ([[UIColor alloc]initWithRed:254/255.0 green:128/255.0 blue:129/255.0 alpha:0.9])
+    // 斗鱼
+//推荐界面 collection内容
+#define DOUYU_COLLECTION (@"http://www.douyutv.com/api/v1/channel?aid=ios&auth=9c24b298e25d67d1019b6038f7b2aefa&client_sys=ios&limit=4&time=1445260800")
+//新秀推荐内容
+#define DOUYU_NEWPEO (@"http://www.douyutv.com/api/v1/home_newbie_list?aid=ios&auth=7601767abc959bc33f8f2fefcf1a975a&client_sys=ios&time=1445260800")
+//头部scorller内容
+#define DOUYU_HEADSCO (@"http://www.douyutv.com/api/v1/slide/6?aid=ios&auth=279360f9c9b926c73917cd5b9847870e&client_sys=ios&time=1445260800")
+
+//直播界面
+#define DOUYU_ZHIBO (@"http://www.douyutv.com/api/v1/live?aid=ios&auth=e7c4dea108f43868b0e15ff320c69d7f&client_sys=ios&limit=20&offset=0&time=1445304060")
+//栏目界面
+#define DOUYU_LANMU (@"http://www.douyutv.com/api/v1/game?aid=ios&auth=7390d2a28a3b5e9d5b922da306e4d4f3&client_sys=ios&time=1445507820")
+
+////加上房间号就是播放链接
+//#define Roomurl @"http://www.douyutv.com/api/v1/room/%@?aid=ios&auth=427d0ba3edbce98371647f94c54d432e&client_sys=ios&time=1445857500"
+//#define Roomurl @"http://www.douyutv.com/api/v1/room/%@?aid=ios&auth=35929425474429995373384a95018e49&client_sys=ios&time=1445858100"
+#define Roomurl @"http://www.douyutv.com/api/v1/room/%@?aid=ios&auth=9c7efc4a0439e041b913f056d77af1aa&client_sys=ios&time=1445858220"
+
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* Defind_pch */
